@@ -10,7 +10,6 @@ def part1():
         forest_lenght=len(forest_grid[0])
         forest_height=len(forest_grid)
         tree_counter=0
-        print(forest_grid)  
 
         for i in range(forest_height):
             for j in range(forest_lenght):
@@ -24,4 +23,19 @@ print(part1())
 
 def part2():
     with open ("day08/file.txt") as file:
+        input_file=file.read().strip().split()
+        forest_grid = [list(map(int, list(line))) for line in input_file]
+
+        forest_lenght=len(forest_grid[0])
+        forest_height=len(forest_grid)
+        tree_counter=0
+        print(forest_grid)  
+        tree_list=[]
+        
+        for i in range(forest_height):
+            templist=[]
+            for j in range(forest_lenght):
+                tree_height=forest_grid[i][j]
         pass
+
+print(part2())
